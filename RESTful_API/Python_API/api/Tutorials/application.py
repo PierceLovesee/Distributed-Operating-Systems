@@ -1,6 +1,8 @@
 # using the project from Caleb Curry as reference for building the project.
 # https://www.youtube.com/watch?v=qbLc5a9jdXo
 
+# Pierce Lovesee - April 18th, 2022
+
 from flask import Flask, request
 app = Flask(__name__)
 from flask_sqlalchemy import SQLAlchemy
@@ -64,17 +66,3 @@ def update_tutorial(id):
         tutorial.description = data['description']
     db.session.commit()
     return {"id": tutorial.id, "name": tutorial.name, "description": tutorial.description}
-
-
-
-
-
-    # tutorial = Tutorial.query.get(id)
-    # form = Tutorial(obj=tutorial)
-    # if tutorial is None:
-    #     return({"error": "not found"})
-    # if tutorial is not None:
-    #     form.populate_obj(tutorial)
-    #     db.session.add(tutorial)
-    #     db.session.commit()
-    #     return {"message": ("Succesfully updated ID " + id + "in database.")}
