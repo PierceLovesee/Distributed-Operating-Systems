@@ -1,6 +1,3 @@
-# using the project from Caleb Curry as reference for building the project.
-# https://www.youtube.com/watch?v=qbLc5a9jdXo
-
 from flask import Flask, request
 app = Flask(__name__)
 from flask_sqlalchemy import SQLAlchemy
